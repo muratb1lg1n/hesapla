@@ -1,21 +1,27 @@
-
-function yaz(sayi){
-    document.getElementById("girdi").value = document.getElementById("girdi").value + sayi
-}
-function esit(){
-    document.getElementById("girdi").value = eval(document.getElementById("girdi").value);
-    return hesap();
-}
-function kare(){
-    document.getElementById("girdi").value = Math.pow(document.getElementById("girdi").value, 2)
-}
-function temiz(){
-    document.getElementById("girdi").value = ''
-}
-function sil(){
-    document.getElementById("girdi").value= document.getElementById("girdi").value.substring(0, document.getElementById("girdi").value.length-1)
-}
-function kok(){
-    document.getElementById("girdi").value = Math.sqrt(document.getElementById("girdi").value)
-    hesap()
-}
+var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!',
+      girdi: '',
+    },
+    methods: {
+        yaz(sayi){
+            this.girdi = this.girdi + sayi
+        },
+        esit(){
+            this.girdi = eval(this.girdi)
+        },
+        temiz(){
+            this.girdi = ""
+        },
+        sil(){
+            this.girdi = this.girdi.slice(0,this.girdi.length-1)
+        },
+        kare(){
+            this.girdi = Math.pow(this.girdi,2)
+        },
+        kok(){
+            this.girdi = Math.sqrt(this.girdi)
+        }
+    }
+  })
