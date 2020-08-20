@@ -1,9 +1,10 @@
-var kisa = document.getElementById("girdi").value
+
 function yaz(sayi){
     document.getElementById("girdi").value = document.getElementById("girdi").value + sayi
 }
 function esit(){
-    document.getElementById("girdi").value = eval(document.getElementById("girdi").value)
+    document.getElementById("girdi").value = eval(document.getElementById("girdi").value);
+    return hesap();
 }
 function kare(){
     document.getElementById("girdi").value = Math.pow(document.getElementById("girdi").value, 2)
@@ -16,4 +17,5 @@ function sil(){
 }
 function kok(){
     document.getElementById("girdi").value = Math.sqrt(document.getElementById("girdi").value)
+    hesap()
 }
